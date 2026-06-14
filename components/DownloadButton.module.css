@@ -58,3 +58,13 @@
     width: auto;
   }
 }
+
+.telegram {
+  background-color: #229ed9;
+  box-shadow: 0 4px 14px 0 rgba(34, 158, 217, 0.3);
+}
+
+.telegram:hover:not(.success):not(.disabled) {
+  background-color: #1d8ec4;
+  box-shadow: 0 6px 20px 0 rgba(34, 158, 217, 0.4);
+}
