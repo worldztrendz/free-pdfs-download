@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Free Pdfs download - Free Educational Notes Download PDF",
-    template: "%s | Free Pdfs download"
+    default: "Free Pdfs Download - Free Educational Notes Download PDF",
+    template: "%s | Free Pdfs Download"
   },
   description: "Download free educational notes in PDF format for BSc, MSc, Engineering, Computer Science, Chemistry, Mathematics, and Physics.",
   metadataBase: new URL("https://freepdfsdownload.com"),
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     canonical: "/"
   },
   openGraph: {
-    title: "Free Pdfs download - Free Educational Notes PDF Download",
+    title: "Free Pdfs Download - Free Educational Notes PDF Download",
     description: "Download free educational notes in PDF format for BSc, MSc, Engineering, Computer Science, and Mathematics.",
     url: "https://freepdfsdownload.com",
-    siteName: "Free Pdfs download",
+    siteName: "Free Pdfs Download",
     locale: "en_US",
     type: "website"
   },

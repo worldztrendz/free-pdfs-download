@@ -14,7 +14,7 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Free Pdfs download",
+    "name": "Free Pdfs Download",
     "url": "https://freepdfsdownload.com",
     "description": "Download free educational notes in PDF format for BSc, MSc, Engineering, Computer Science, and Physics.",
     "potentialAction": {

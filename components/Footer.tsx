@@ -28,7 +28,7 @@ export default function Footer() {
                 <polyline points="14 2 14 8 20 8"></polyline>
               </svg>
             </div>
-            <span>Free Pdfs download</span>
+            <span>Free Pdfs Download</span>
           </Link>
           <p className={styles.tagline}>
             Free educational notes and study materials in PDF format for high school, undergraduate, and graduate courses.
@@ -54,7 +54,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className={styles.copyrightArea}>
           <p className={styles.copyright}>
-            &copy; {currentYear} Free Pdfs download. All rights reserved. Built with Next.js App Router.
+            &copy; {currentYear} Free Pdfs Download. All rights reserved.
           </p>
         </div>
       </div>

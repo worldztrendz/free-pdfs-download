@@ -30,13 +30,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${pdf.title} Free Download PDF - Free Pdfs download`,
+    title: `${pdf.title} Free Download PDF - Free Pdfs Download`,
     description: pdf.description,
     alternates: {
       canonical: `/pdf/${pdf.slug}`,
     },
     openGraph: {
-      title: `${pdf.title} Free Download PDF - Free Pdfs download`,
+      title: `${pdf.title} Free Download PDF - Free Pdfs Download`,
       description: pdf.description,
       url: `https://freepdfsdownload.com/pdf/${pdf.slug}`,
       images: [
@@ -84,7 +84,7 @@ export default async function PdfDetailPage({ params }: PageProps) {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Free Pdfs download",
+      "name": "Free Pdfs Download",
       "url": "https://freepdfsdownload.com"
     },
     "datePublished": pdf.dateAdded,

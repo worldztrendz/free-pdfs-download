@@ -42,7 +42,7 @@ export default function Header() {
               <polyline points="10 9 9 9 8 9"></polyline>
             </svg>
           </div>
-          <span>Free Pdfs download</span>
+          <span>Free Pdfs Download</span>
         </Link>
 
         {/* Search Bar */}
@@ -60,7 +60,7 @@ export default function Header() {
           </Link> */}
 
           <div className={styles.dropdownContainer}>
-            <span
+            {/* <span
               className={`${styles.navLink} ${pathname?.startsWith("/category/") ? styles.navLinkActive : ""
                 }`}
             >
@@ -77,7 +77,7 @@ export default function Header() {
               >
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-            </span>
+            </span> */}
             <div className={styles.dropdownMenu}>
               {categories.map((cat) => (
                 <Link

@@ -28,13 +28,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${category.name} Notes Free Download PDF - Free Pdfs download`,
+    title: `${category.name} Notes Free Download PDF - Free Pdfs Download`,
     description: category.description || `High-quality lecture notes, books, and reference PDFs for ${category.name}. Free download.`,
     alternates: {
       canonical: `/category/${category.slug}`
     },
     openGraph: {
-      title: `${category.name} Notes Free Download PDF - Free Pdfs download`,
+      title: `${category.name} Notes Free Download PDF - Free Pdfs Download`,
       description: category.description || `High-quality lecture notes, books, and reference PDFs for ${category.name}. Free download.`,
       url: `https://freepdfsdownload.com/category/${category.slug}`,
     }

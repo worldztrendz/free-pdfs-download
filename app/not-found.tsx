@@ -20,7 +20,7 @@ export default function NotFound() {
           Back to Homepage
         </Link>
         <Link href="/about" className={styles.btnSecondary}>
-          About Free Pdfs download
+          About Free Pdfs Download
         </Link>
       </div>
     </div>

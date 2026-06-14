@@ -4,8 +4,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import styles from "../text-page.module.css";
 
 export const metadata: Metadata = {
-  title: "About Us - Free Pdfs download",
-  description: "Learn more about Free Pdfs download, our mission to democratize education, and our team of content curators.",
+  title: "About Us - Free Pdfs Download",
+  description: "Learn more about Free Pdfs Download, our mission to democratize education, and our team of content curators.",
   alternates: {
     canonical: "/about"
   }
@@ -19,12 +19,12 @@ export default function AboutPage() {
       <Breadcrumb items={breadcrumbItems} />
       
       <div className={styles.wrapper}>
-        <h1 className={styles.title}>About Free Pdfs download</h1>
+        <h1 className={styles.title}>About Free Pdfs Download</h1>
         <p className={styles.subtitle}>Empowering students and educators through free educational resources.</p>
         
         <div className={styles.content}>
           <p>
-            Welcome to <strong>Free Pdfs download</strong>, a free educational resource sharing platform. Our platform was founded
+            Welcome to <strong>Free Pdfs Download</strong>, a free educational resource sharing platform. Our platform was founded
             with a single, clear objective: to make high-quality academic notes and reference materials accessible to
             every student, anywhere, completely free of charge.
           </p>
@@ -50,7 +50,7 @@ export default function AboutPage() {
 
           <h2>Get Involved</h2>
           <p>
-            Free Pdfs download is driven by a passionate community of learners and educators. If you have high-quality notes that
+            Free Pdfs Download is driven by a passionate community of learners and educators. If you have high-quality notes that
             could help other students, we encourage you to share them with us. Reach out via our Contact Page to see how
             you can contribute to our growing library.
           </p>
