@@ -3,7 +3,10 @@ export interface Category {
   name: string;
   slug: string;
   description?: string;
-  h1?: string;
+  title?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  keywords?: string[];
 }
 
 export interface PDF {
@@ -24,8 +27,8 @@ export interface PDF {
   name?: string;
 
   // Rich article metadata and content schemas
-  meta_title?: string;
-  meta_description?: string;
+  metaTitle?: string;
+  metaDescription?: string;
   keywords?: string[];
   content?: {
     introduction: string;

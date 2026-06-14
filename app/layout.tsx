@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,9 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Free Pdfs Download - Free Educational Notes Download PDF",
+    default: "Free Pdfs Download - Free Educational Notes PDF Download",
     template: "%s | Free Pdfs Download"
   },
+  keywords: "Free PDF Downloads, Educational Notes, BSc Notes, MSc Notes, Engineering Notes, Computer Science Notes, Chemistry Notes, Mathematics Notes, Physics Notes",
+  publisher:"Free Pdfs Download",
   description: "Download free educational notes in PDF format for BSc, MSc, Engineering, Computer Science, Chemistry, Mathematics, and Physics.",
   metadataBase: new URL("https://freepdfsdownload.com"),
   alternates: {
@@ -53,6 +56,7 @@ export default function RootLayout({
         <Header />
         <main style={{ flex: "1 0 auto" }}>{children}</main>
         <Footer />
+        <GoogleAnalytics />
       </body>
     </html>
   );

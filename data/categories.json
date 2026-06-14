@@ -2,38 +2,41 @@
   {
     "id": 1,
     "name": "BSc Physics",
-    "slug": "bsc-physics",
+    "slug": "bsc-physics-notes-free-pdf-download",
     "description": "Comprehensive study materials, lecture notes, and lab manuals for BSc Physics students."
   },
   {
     "id": 2,
     "name": "BSc Mathematics",
-    "slug": "bsc-mathematics",
+    "slug": "bsc-mathematics-notes-free-pdf-download",
     "description": "Complete notes on Calculus, Algebra, Real Analysis, and Differential Equations."
   },
   {
     "id": 3,
     "name": "Computer Science",
-    "slug": "computer-science",
+    "slug": "computer-science-notes-free-pdf-download",
     "description": "Notes covering Programming, Algorithms, Database Systems, and Web Development."
   },
   {
     "id": 4,
     "name": "MSc Chemistry",
-    "slug": "msc-chemistry",
+    "slug": "msc-chemistry-notes-free-pdf-download",
     "description": "Advanced reference materials and lecture notes for Organic, Inorganic, and Physical Chemistry."
   },
   {
     "id": 5,
     "name": "Engineering notes",
-    "slug": "engineering",
+    "slug": "engineering-notes-free-pdf-download",
     "description": "Core engineering notes covering Mechanics, Electronics, Thermodynamics, and Data Structures."
   },
   {
     "id": 6,
     "name": "Rashtriya Gaurav",
     "slug": "rashtra-gaurav-model-paper-free-pdf-download",
-    "h1": "Rashtra Gaurav Model Paper PDF Download",
+    "metaTitle": "Rashtriya Gaurav Model Test Paper Download",
+    "metaDescription": "Free PDF downloads of Rashtra Gaurav model papers and PYQ from Chaudhary Charan Singh University (CCSU) Meerut and Lucknow University",
+    "keywords": "rashtra gaurav model paper, rashtra gaurav previous year question paper, rashtra gaurav question paper, rashtra gaurav model paper pdf, rashtra gaurav sample paper, rashtra gaurav objective questions",
+    "title": "Rashtra Gaurav Model Paper Free PDF Download",
     "description": "This page provides free PDF downloads of Rashtra Gaurav model papers and previous year question papers from Chaudhary Charan Singh University (CCSU) Meerut and Lucknow University, helping students prepare effectively for their examinations."
   }
 ]

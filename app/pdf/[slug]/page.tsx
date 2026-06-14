@@ -30,14 +30,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${pdf.title} Free Download PDF - Free Pdfs Download`,
-    description: pdf.description,
+    title: `${pdf.metaTitle}`,
+    description: pdf.metaDescription,
+    keywords: pdf.keywords,
     alternates: {
       canonical: `/pdf/${pdf.slug}`,
     },
     openGraph: {
-      title: `${pdf.title} Free Download PDF - Free Pdfs Download`,
-      description: pdf.description,
+      title: `${pdf.metaTitle}`,
+      description: pdf.metaDescription,
       url: `https://freepdfsdownload.com/pdf/${pdf.slug}`,
       images: [
         {
@@ -74,8 +75,8 @@ export default async function PdfDetailPage({ params }: PageProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DigitalDocument",
-    "name": pdf.title,
-    "description": pdf.description,
+    "name": pdf.metaTitle,
+    "description": pdf.metaDescription,
     "fileFormat": "application/pdf",
     "url": `https://freepdfsdownload.com/pdf/${pdf.slug}`,
     "author": {

@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const category = getCategoryBySlug(slug);
-  
+
   if (!category) {
     return {
       title: "Category Not Found",
@@ -28,14 +28,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${category.name} Notes Free Download PDF - Free Pdfs Download`,
-    description: category.description || `High-quality lecture notes, books, and reference PDFs for ${category.name}. Free download.`,
+    title: category.metaTitle || `${category.name} Notes`,
+    description: category.metaDescription || `High-quality lecture notes, books, and reference PDFs for ${category.name}. Free download.`,
     alternates: {
       canonical: `/category/${category.slug}`
     },
+    keywords: category?.keywords,
     openGraph: {
-      title: `${category.name} Notes Free Download PDF - Free Pdfs Download`,
-      description: category.description || `High-quality lecture notes, books, and reference PDFs for ${category.name}. Free download.`,
+      title: category.metaTitle || `${category.name} Notes`,
+      description: category.metaDescription || `High-quality lecture notes, books, and reference PDFs for ${category.name}. Free download.`,
       url: `https://freepdfsdownload.com/category/${category.slug}`,
     }
   };
@@ -55,9 +56,9 @@ export default async function CategoryPage({ params }: PageProps) {
   return (
     <div className="container">
       <Breadcrumb items={breadcrumbItems} />
-      
+
       <header className={styles.header}>
-        <h1 className={styles.title}>{category.h1 || `${category.name} Notes`}</h1>
+        <h1 className={styles.title}>{category.title || `${category.name} Notes`}</h1>
         <p className={styles.description}>
           {category.description || `Explore free high-quality PDF study materials, textbooks, and class notes for ${category.name} students.`}
         </p>
