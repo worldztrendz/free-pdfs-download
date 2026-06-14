@@ -1,0 +1,200 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 20px 0 60px 0;
+}
+
+@media (min-width: 992px) {
+  .layout {
+    grid-template-columns: 320px 1fr;
+  }
+}
+
+.thumbnailCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.thumbnailWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: var(--section-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnailPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-light), rgba(37, 99, 235, 0.03));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  gap: 16px;
+}
+
+.placeholderIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  color: var(--primary-color);
+}
+
+.placeholderText {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+.categoryBadge {
+  display: inline-block;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  font-weight: 700;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+.descriptionBox {
+  background-color: var(--section-bg);
+  border-left: 4px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.descriptionTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.descriptionText {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* File Info Grid */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  background-color: var(--card-bg);
+}
+
+@media (min-width: 576px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.infoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--section-bg);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.infoLabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.infoValue {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Related PDFs Section */
+.relatedSection {
+  border-top: 1px solid var(--border-color);
+  padding: 60px 0;
+  margin-top: 20px;
+}
+
+.relatedTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 576px) {
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .relatedGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .relatedGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "BSc Physics",
+    "slug": "bsc-physics",
+    "description": "Comprehensive study materials, lecture notes, and lab manuals for BSc Physics students."
+  },
+  {
+    "id": 2,
+    "name": "BSc Mathematics",
+    "slug": "bsc-mathematics",
+    "description": "Complete notes on Calculus, Algebra, Real Analysis, and Differential Equations."
+  },
+  {
+    "id": 3,
+    "name": "Computer Science",
+    "slug": "computer-science",
+    "description": "Notes covering Programming, Algorithms, Database Systems, and Web Development."
+  },
+  {
+    "id": 4,
+    "name": "MSc Chemistry",
+    "slug": "msc-chemistry",
+    "description": "Advanced reference materials and lecture notes for Organic, Inorganic, and Physical Chemistry."
+  },
+  {
+    "id": 5,
+    "name": "Engineering notes",
+    "slug": "engineering",
+    "description": "Core engineering notes covering Mechanics, Electronics, Thermodynamics, and Data Structures."
+  }
+]
