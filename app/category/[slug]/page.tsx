@@ -57,7 +57,7 @@ export default async function CategoryPage({ params }: PageProps) {
       <Breadcrumb items={breadcrumbItems} />
       
       <header className={styles.header}>
-        <h1 className={styles.title}>{category.name} Notes</h1>
+        <h1 className={styles.title}>{category.h1 || `${category.name} Notes`}</h1>
         <p className={styles.description}>
           {category.description || `Explore free high-quality PDF study materials, textbooks, and class notes for ${category.name} students.`}
         </p>

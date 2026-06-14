@@ -11,15 +11,13 @@ interface PdfCardProps {
 
 export default function PdfCard({ pdf }: PdfCardProps) {
   // Format category slug to human-readable
-  const categoryLabel = pdf.category.split("-").map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(" ");
+  const categoryLabel = pdf.name;
 
   return (
     <div className={styles.card}>
       <div className={styles.thumbnailWrapper}>
         <span className={styles.badge}>{categoryLabel}</span>
-        
+
         {/* We display a premium placeholder document vector for initial state, which is responsive and super fast */}
         <div className={styles.thumbnailPlaceholder}>
           <div className={styles.placeholderIcon}>
@@ -49,7 +47,7 @@ export default function PdfCard({ pdf }: PdfCardProps) {
           <h3 className={styles.title}>{pdf.title}</h3>
         </Link>
         <p className={styles.description}>{pdf.description}</p>
-        
+
         <div className={styles.metaRow}>
           <span className={styles.metaItem}>
             <svg

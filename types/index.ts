@@ -3,6 +3,7 @@ export interface Category {
   name: string;
   slug: string;
   description?: string;
+  h1?: string;
 }
 
 export interface PDF {
@@ -20,6 +21,7 @@ export interface PDF {
   isPopular: boolean;
   downloadCount: number; // e.g. 1250
   author?: string;
+  name?: string;
 
   // Rich article metadata and content schemas
   meta_title?: string;
