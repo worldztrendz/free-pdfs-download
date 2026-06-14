@@ -46,9 +46,9 @@ export default function Header() {
         </Link>
 
         {/* Search Bar */}
-        <div className={styles.headerSearch}>
+        {/* <div className={styles.headerSearch}>
           <SearchBar />
-        </div>
+        </div> */}
 
         {/* Desktop Navigation */}
         <nav className={styles.nav}>
@@ -60,10 +60,9 @@ export default function Header() {
           </Link> */}
 
           <div className={styles.dropdownContainer}>
-            {/* <span
-              className={`${styles.navLink} ${
-                pathname?.startsWith("/category/") ? styles.navLinkActive : ""
-              }`}
+            <span
+              className={`${styles.navLink} ${pathname?.startsWith("/category/") ? styles.navLinkActive : ""
+                }`}
             >
               Categories
               <svg
@@ -78,7 +77,7 @@ export default function Header() {
               >
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
-            </span> */}
+            </span>
             <div className={styles.dropdownMenu}>
               {categories.map((cat) => (
                 <Link

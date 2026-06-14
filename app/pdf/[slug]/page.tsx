@@ -142,10 +142,157 @@ export default async function PdfDetailPage({ params }: PageProps) {
 
             <h1 className={styles.title}>{pdf.title}</h1>
 
-            <div className={styles.descriptionBox}>
-              <h2 className={styles.descriptionTitle}>Description / Overview</h2>
-              <p className={styles.descriptionText}>{pdf.description}</p>
-            </div>
+            {pdf.content ? (
+              <div className={styles.richArticle}>
+                <p className={styles.introText}>{pdf.content.introduction}</p>
+
+                {pdf.content.why_use_notes && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>{pdf.content.why_use_notes.heading}</h2>
+                    <p className={styles.articleText}>{pdf.content.why_use_notes.description}</p>
+                    <ul className={styles.articleList}>
+                      {pdf.content.why_use_notes.points.map((point: string, idx: number) => (
+                        <li key={idx}>{point}</li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {pdf.content.subjects && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>{pdf.content.subjects.heading}</h2>
+                    <p className={styles.articleText}>{pdf.content.subjects.description}</p>
+                    <div className={styles.topicsGrid}>
+                      {pdf.content.subjects.topics.map((topic: any, idx: number) => (
+                        <div key={idx} className={styles.topicCard}>
+                          <h3 className={styles.topicName}>{topic.name}</h3>
+                          <ul className={styles.subtopicsList}>
+                            {topic.subtopics.map((sub: string, sIdx: number) => (
+                              <li key={sIdx} className={styles.subtopicItem}>
+                                <svg
+                                  className={styles.subtopicIcon}
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2.5"
+                                  style={{ color: "var(--primary-color)", flexShrink: 0 }}
+                                >
+                                  <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                {sub}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                {pdf.content.benefits_of_pdf && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>{pdf.content.benefits_of_pdf.heading}</h2>
+                    <ul className={styles.articleCheckList}>
+                      {pdf.content.benefits_of_pdf.points.map((point: string, idx: number) => (
+                        <li key={idx} className={styles.checkListItem}>
+                          <svg
+                            className={styles.checkIcon}
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="3"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {pdf.content.exam_preparation_tips && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>{pdf.content.exam_preparation_tips.heading}</h2>
+                    <ol className={styles.tipsList}>
+                      {pdf.content.exam_preparation_tips.tips.map((tip: string, idx: number) => (
+                        <li key={idx} className={styles.tipItem}>
+                          <span className={styles.tipNumber}>{idx + 1}</span>
+                          <span className={styles.tipText}>{tip}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </section>
+                )}
+
+                {pdf.content.who_can_use && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>{pdf.content.who_can_use.heading}</h2>
+                    <ul className={styles.articleCheckList}>
+                      {pdf.content.who_can_use.points.map((point: string, idx: number) => (
+                        <li key={idx} className={styles.checkListItem}>
+                          <svg
+                            className={styles.checkIcon}
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="3"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {pdf.content.faq && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>Frequently Asked Questions (FAQs)</h2>
+                    <div className={styles.faqList}>
+                      {pdf.content.faq.map((faqItem: any, idx: number) => (
+                        <details key={idx} className={styles.faqItem}>
+                          <summary className={styles.faqQuestion}>
+                            <span>{faqItem.question}</span>
+                            <span className={styles.faqArrow}>
+                              <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.5"
+                              >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                            </span>
+                          </summary>
+                          <div className={styles.faqAnswer}>
+                            <p>{faqItem.answer}</p>
+                          </div>
+                        </details>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                <section className={`${styles.articleSection} ${styles.conclusionBox}`}>
+                  <p className={styles.introText}>{pdf.content.conclusion}</p>
+                </section>
+              </div>
+            ) : (
+              <div className={styles.descriptionBox}>
+                <h2 className={styles.descriptionTitle}>Description / Overview</h2>
+                <p className={styles.descriptionText}>{pdf.description}</p>
+              </div>
+            )}
 
             {/* File Info Grid */}
             <div className={styles.infoGrid}>
