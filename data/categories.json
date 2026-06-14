@@ -28,8 +28,11 @@
     "name": "Engineering notes",
     "slug": "engineering",
     "description": "Core engineering notes covering Mechanics, Electronics, Thermodynamics, and Data Structures."
-  }
-  ,{
-    
+  },
+  {
+    "id": 6,
+    "name": "Rashtriya Gaurav",
+    "slug": "rashtriya-gaurav",
+    "description": "Chaudhary Charan Singh University (CCSU) Meerut and Lucknow University Rashtra Gaurav model papers and previous year questions."
   }
 ]
