@@ -32,6 +32,13 @@ export interface PDF {
       description: string;
       points: string[];
     };
+    available_papers?: {
+      heading: string;
+      universities: {
+        name: string;
+        papers: string[];
+      }[];
+    };
     subjects?: {
       heading: string;
       description: string;
@@ -40,7 +47,15 @@ export interface PDF {
         subtopics: string[];
       }[];
     };
+    subjects_covered?: {
+      heading: string;
+      topics: string[];
+    };
     benefits_of_pdf?: {
+      heading: string;
+      points: string[];
+    };
+    benefits_of_previous_papers?: {
       heading: string;
       points: string[];
     };
@@ -48,9 +63,18 @@ export interface PDF {
       heading: string;
       tips: string[];
     };
+    preparation_tips?: {
+      heading: string;
+      tips: string[];
+    };
     who_can_use?: {
       heading: string;
       points: string[];
+    };
+    download_section?: {
+      heading: string;
+      description: string;
+      downloads: string[];
     };
     faq?: {
       question: string;

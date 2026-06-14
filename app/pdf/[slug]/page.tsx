@@ -158,6 +158,38 @@ export default async function PdfDetailPage({ params }: PageProps) {
                   </section>
                 )}
 
+                {pdf.content.available_papers && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>{pdf.content.available_papers.heading}</h2>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "20px", marginTop: "12px" }}>
+                      {pdf.content.available_papers.universities.map((uni: any, idx: number) => (
+                        <div key={idx} className={styles.topicCard} style={{ width: "100%" }}>
+                          <h3 className={styles.topicName} style={{ marginBottom: "8px" }}>{uni.name}</h3>
+                          <ul className={styles.subtopicsList}>
+                            {uni.papers.map((paper: string, pIdx: number) => (
+                              <li key={pIdx} className={styles.subtopicItem}>
+                                <svg
+                                  className={styles.subtopicIcon}
+                                  width="14"
+                                  height="14"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2.5"
+                                  style={{ color: "var(--primary-color)", flexShrink: 0 }}
+                                >
+                                  <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                {paper}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
                 {pdf.content.subjects && (
                   <section className={styles.articleSection}>
                     <h2 className={styles.articleSubheading}>{pdf.content.subjects.heading}</h2>
@@ -191,11 +223,59 @@ export default async function PdfDetailPage({ params }: PageProps) {
                   </section>
                 )}
 
+                {pdf.content.subjects_covered && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>{pdf.content.subjects_covered.heading}</h2>
+                    <ul className={styles.articleCheckList}>
+                      {pdf.content.subjects_covered.topics.map((topic: string, idx: number) => (
+                        <li key={idx} className={styles.checkListItem}>
+                          <svg
+                            className={styles.checkIcon}
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="3"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                          <span>{topic}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
                 {pdf.content.benefits_of_pdf && (
                   <section className={styles.articleSection}>
                     <h2 className={styles.articleSubheading}>{pdf.content.benefits_of_pdf.heading}</h2>
                     <ul className={styles.articleCheckList}>
                       {pdf.content.benefits_of_pdf.points.map((point: string, idx: number) => (
+                        <li key={idx} className={styles.checkListItem}>
+                          <svg
+                            className={styles.checkIcon}
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="3"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {pdf.content.benefits_of_previous_papers && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>{pdf.content.benefits_of_previous_papers.heading}</h2>
+                    <ul className={styles.articleCheckList}>
+                      {pdf.content.benefits_of_previous_papers.points.map((point: string, idx: number) => (
                         <li key={idx} className={styles.checkListItem}>
                           <svg
                             className={styles.checkIcon}
@@ -229,6 +309,20 @@ export default async function PdfDetailPage({ params }: PageProps) {
                   </section>
                 )}
 
+                {pdf.content.preparation_tips && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>{pdf.content.preparation_tips.heading}</h2>
+                    <ol className={styles.tipsList}>
+                      {pdf.content.preparation_tips.tips.map((tip: string, idx: number) => (
+                        <li key={idx} className={styles.tipItem}>
+                          <span className={styles.tipNumber}>{idx + 1}</span>
+                          <span className={styles.tipText}>{tip}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </section>
+                )}
+
                 {pdf.content.who_can_use && (
                   <section className={styles.articleSection}>
                     <h2 className={styles.articleSubheading}>{pdf.content.who_can_use.heading}</h2>
@@ -247,6 +341,32 @@ export default async function PdfDetailPage({ params }: PageProps) {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                           <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {pdf.content.download_section && (
+                  <section className={styles.articleSection}>
+                    <h2 className={styles.articleSubheading}>{pdf.content.download_section.heading}</h2>
+                    <p className={styles.articleText}>{pdf.content.download_section.description}</p>
+                    <ul className={styles.articleCheckList}>
+                      {pdf.content.download_section.downloads.map((item: string, idx: number) => (
+                        <li key={idx} className={styles.checkListItem}>
+                          <svg
+                            className={styles.checkIcon}
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="3"
+                            style={{ color: "var(--primary-color)" }}
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                          <span>{item}</span>
                         </li>
                       ))}
                     </ul>
